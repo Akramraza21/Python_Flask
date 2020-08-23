@@ -1,26 +1,26 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, {Component, Fragment} from 'react';
+import axios from 'axios';
 import './App.css';
 
-function App() {
-  return (
+class App extends Component {
+  constructor(props){
+    super(props)
+    this.state={"name":"akatsuki"}
+  }
+  componentDidMount(){
+    axios.get('http://127.0.0.1:5000/')
+    .then(resp=>this.setState({name:resp.data.name}))
+  }
+  render(){
+    return( <Fragment>
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+      Hello
+      {this.state.name}
+     </div>
+     </Fragment>
+    )
+  }
 }
+
 
 export default App;
