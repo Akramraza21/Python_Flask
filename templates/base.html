@@ -1,0 +1,28 @@
+{% extends 'index.html' %}
+
+{% block head %}
+<title>Mobile</title>
+{% endblock %}
+
+{% block body %}
+    <h1>List of mobile phone</h1>
+    <form action="mobiles" method="POST" class="form">
+        <label>Name : </label><input type="text" name="name" id="name"><br>
+        <label>Ram : </label><input type="text" name="ram" id="ram"><br>
+        <label>Storage : </label><input type="text" name="storage" id="storage"><br><br>
+        <input type="submit"  value="Add Phone">
+    </form>
+
+    {% for mobile in mobiles %}
+    <div class="div">
+        <h1>Name : {{mobile.name}}</h1>
+        <p>Ram : {{mobile.ram}}</p>
+        {% if mobile.storage %}
+            <p>Storage : {{mobile.storage}}</p>
+        {% else %}
+        <p>Storage : Unknown</p>
+        {% endif %}
+        <a href="/mobiles/delete/{{mobile.id}}">Delete Mobile</a> <a href="/mobiles/edit/{{mobile.id}}">Edit Mobile</a>
+    </div>
+    {% endfor %}
+{% endblock %}

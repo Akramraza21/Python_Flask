@@ -1,0 +1,11 @@
+.div {
+        width: 50%;
+        height: 170px;
+        padding: 10px;
+        background-color: aquamarine;
+}
+.form {
+        width: 50%;
+        padding: 10px;
+        background-color: cadetblue;
+}
