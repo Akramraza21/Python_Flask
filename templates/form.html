@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<form action="/post/edit/{{post.id}}" style="margin:20px; padding:20px; width: 40%; height: 300px; border: 2px solid black; background-color: rgb(117, 105, 105);" method="POST">
+    <label for="article">Article :</label>
+    <textarea name="article" id="article" cols="40" rows="10" aria-valuenow={{post.article}}></textarea><br><br>
+    <label for="author">Author :</label>
+    <input type="text" name="author" id="author" value={{post.author}}><br><br><br>
+    <input type="submit" value="EDIT">
+    </form>
+{% endblock %}
