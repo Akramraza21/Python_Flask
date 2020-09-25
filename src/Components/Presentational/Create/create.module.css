@@ -1,0 +1,40 @@
+.divHead{
+    margin: 1em auto;
+    width: 100%;
+    
+}
+.parentleft{
+    width: 60%; 
+    /* background-color: rgb(211, 80, 211); */
+    display: flex;
+
+    /* height: 100px; */
+    
+}
+.parentright{
+    width: 40%;
+    position: absolute;
+    right: 0px;
+}
+.rightchild{
+    margin: 10px ;
+    padding: 20px;
+    background-color: rgba(66, 63, 66,.1);
+    border-radius: 10px;
+}
+.leftchild{
+    margin: 10px  10px;
+    background-color: rgba(149, 189, 69,.2);
+    padding: 20px;
+    border-radius: 10px;
+
+
+}
+@media (max-width:600px){
+    .parentleft{
+        flex-direction: column;
+    }
+    .rightchild{
+        margin: 10px 0px;
+    }
+}

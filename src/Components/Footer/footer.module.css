@@ -1,0 +1,82 @@
+.foot{
+    width:100%;
+    height:200px;
+    border-top  :1px solid rgba(81, 86, 99,1);
+}
+.chat{
+    width: 20em;
+    height: 20em;
+    border: 1px solid rgba(0, 0, 0,.5);
+    background-color:  rgb(195, 204, 230);
+    border-radius: 4px;
+    position: fixed;
+    right: 20px;
+    bottom: 54px;
+}
+.chatHead{
+    width: 100%;
+    height: 14%;
+    cursor: pointer;
+    margin-top: 0px ;
+    border-bottom: 1px 0px solid rgba(0, 0, 0,.5);
+    border-top:2px solid rgba(0, 0, 0,.5);
+    background-color: rgb(98, 100, 107);
+    color: wheat;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.chatBody{
+    width: 100%;
+    height: 86%;
+    border-bottom: 1px solid rgba(0, 0, 0,.5);
+    background-color: rgb(195, 204, 230);
+    overflow-y:auto ;
+}
+.facebook{
+    /* background-color: white; */
+    width: 30px;
+    height: 30px;
+    margin: 10px;
+    /* border: 4px solid rgb(37, 33, 33); */
+    /* border-radius: 13px; */
+    cursor: pointer;
+}
+.container{
+    /* background-color: turquoise; */
+    margin: 10px;
+    /* width: 180px;  */
+    
+}
+.subcontainer{
+    display: flex;
+    justify-content: flex-end;
+    
+}
+.div{
+    height:4rem;
+    width:4rem;
+    border-radius: 50%;
+    background-color:rgb(168, 157, 157);
+    border: 2px solid rgba(3, 3, 3,.6);
+    position:fixed;
+    right: 20px;
+    bottom: 20px;
+    z-index:100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.div:hover{
+    /* padding:10px; */
+    cursor: pointer;
+    background-color: gray;
+    color: wheat;
+}
+
+@media (max-width:360px){
+    .chat{
+        width: 100%;
+    }
+}

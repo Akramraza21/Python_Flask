@@ -1,0 +1,190 @@
+.container {
+  width: 639px;
+  height: 377px;
+  margin: 30px auto;
+  border: 1px solid rgba(49, 47, 47, 0.5);
+  border-radius: 5px;
+}
+.pointer {
+  width: 152px;
+  height: 33px;
+  background: #68a7ff;
+  position: absolute;
+  top: -18px;
+  right: 0px;
+}
+.pointer::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 0;
+  border-left: 20px solid rgba(238, 235, 235, 0.5);
+  border-top: 18px solid transparent;
+  border-bottom: 15px solid transparent;
+}
+.picture {
+  width: 639.3px;
+  height: 233.2px;
+}
+.ranking {
+  display: inline;
+  padding: 10px 15px;
+  margin: 5px;
+  border-radius: 16.5px;
+  background-color: #ffffff;
+  font-family: Roboto, Helvetica, sans-serif;
+  font-size: 13.5px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.33;
+  letter-spacing: normal;
+  text-align: left;
+  color: var(--greyish-brown);
+}
+.rankLocation {
+  /* width: 135px;
+  height: 34px; */
+  position: relative;
+  top: 195px;
+  z-index: 5;
+  margin-left: 10px;
+}
+
+.rank {
+  width: 219px;
+  height: 13px;
+  font-family: Roboto, Helvetica, sans-serif;
+  font-size: 13.5px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.33;
+  letter-spacing: normal;
+  text-align: left;
+  color: #ffffff;
+  position: absolute;
+  bottom: 23px;
+  right: 10px;
+}
+.rating {
+  /*  */
+  position: absolute;
+  top: 35px;
+  right: 20px;
+  padding: 2px 5px;
+  border-radius: 5px;
+  font-family: Roboto, Helvetica, sans-serif;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.33;
+  letter-spacing: normal;
+  text-align: center;
+  color: #ffffff;
+  background-color: #f5a626;
+}
+.collegeName {
+  margin: 7px 23px;
+  width: 37em;
+  position: absolute;
+}
+.unchecked {
+  color: rgba(117, 113, 113, 0.5);
+}
+.fee {
+  float: right;
+  text-align: right;
+}
+.discount {
+  width: 37px;
+  height: 10px;
+  padding-right: 6px;
+  font-family: Roboto, Helvetica, sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.64;
+  letter-spacing: normal;
+  text-align: center;
+  color: var(--greyish-brown);
+}
+
+.discountPercent {
+  background-color: #dd1c26;
+  color: #ffffff;
+  font-family: Roboto, Helvetica, sans-serif;
+  font-size: 12px;
+  margin-left: 5px;
+  font-weight: 700;
+  font-stretch: normal;
+  padding: 1px 4.2px;
+  font-style: normal;
+  line-height: 1.64;
+}
+
+.originalFee {
+  font-size: 25px;
+  font-weight: 700;
+  color: #dd1c26;
+}
+.nearestPlace {
+  margin-top: 8px;
+}
+.distance {
+  color: rgba(66, 57, 57, 0.6);
+}
+.offer {
+  width: 56%;
+  padding: 2% 20px;
+  border-top-right-radius: 25px;
+  border-bottom-right-radius: 25px;
+  font-size: 13.5px;
+  background-color: #ccf5e7;
+  margin-top: 10px;
+  margin-left: -23px;
+}
+.login {
+  color: #1999d2;
+}
+.offColor {
+  color: #4bb89e;
+}
+.locate {
+  font-size: 14px;
+
+  margin-top: 8px;
+}
+.above {
+  position: absolute;
+  width: 40em;
+  height: 14.5em;
+  background-color: rgba(36, 35, 35, 0.7);
+}
+.smallSize {
+  font-size: 10px;
+  font-weight: 600;
+  color: rgb(75, 71, 71);
+}
+
+.promoted {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+}
+.smallSize::after {
+  content: "";
+  position: absolute;
+  right: 25px;
+  top: 3px;
+  /* font-weight: 600; */
+  width: 0;
+  height: 0;
+  border-top: 9px solid transparent;
+  border-bottom: 7px solid transparent;
+  border-right: 12px solid #dd1c26;
+}
