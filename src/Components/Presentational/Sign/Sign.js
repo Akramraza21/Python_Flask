@@ -4,6 +4,7 @@ import Button from "../Button/Button";
 import { NavLink } from "react-router-dom";
 import clas from "./sign.module.css";
 import axios from "axios";
+import passwordHash from "password-hash";
 
 export default class Sign extends React.Component {
   state = {
@@ -23,13 +24,14 @@ export default class Sign extends React.Component {
   formHandler = (event) => {
     event.preventDefault();
     const { name, email, number, password } = this.state;
-
+    let hashPass = passwordHash.generate(password);
     const data = {
       name: name,
       email: email,
       number: number,
-      password: password,
+      password: hashPass,
     };
+    console.log(data);
     axios
       .post("http://0.0.0.0:5000/sign", data)
       .then((resp) => {

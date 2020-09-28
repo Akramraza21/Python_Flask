@@ -5,20 +5,32 @@ import classes from "../colleges/colleges.module.css";
 export default function Colleges(props) {
   return (
     <React.Fragment>
-      <div style={{ display: "flex", flexWrap: "wrap" }}>
+      <div
+        style={{
+          display: "flex",
+          flexWrap: "wrap",
+          height: "500px",
+          overflowY: "scroll",
+        }}
+      >
+        <img
+          src={require("../assets/backgroundCollege.jpg")}
+          className={classes.backgroundImg}
+          alt="college"
+        />
         {props.data.colleges.map((param, index) => (
           <div key={index} className={classes.container}>
+            <img
+              className={classes.picture}
+              src={require("../assets/college_02.jpg")}
+              alt="college"
+            />
             <Head
               promoted={param.promoted}
               tags={param.tags}
               rating={param.rating}
               ranking={param.ranking}
               rating_remarks={param.rating_remarks}
-            />
-            <img
-              className={classes.picture}
-              src={require("../assets/college_02.jpg")}
-              alt="college"
             />
 
             {/* */}

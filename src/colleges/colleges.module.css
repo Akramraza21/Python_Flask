@@ -4,6 +4,7 @@
   margin: 30px auto;
   border: 1px solid rgba(49, 47, 47, 0.5);
   border-radius: 5px;
+  background-color: white;
 }
 .pointer {
   width: 152px;
@@ -88,7 +89,14 @@
 .collegeName {
   margin: 7px 23px;
   width: 37em;
+  position: relative;
+  bottom: 233px;
+}
+.backgroundImg {
   position: absolute;
+  z-index: -100;
+  height: 500px;
+  width: 100%;
 }
 .unchecked {
   color: rgba(117, 113, 113, 0.5);
@@ -158,7 +166,8 @@
   margin-top: 8px;
 }
 .above {
-  position: absolute;
+  position: relative;
+  bottom: 237px;
   width: 40em;
   height: 14.5em;
   background-color: rgba(36, 35, 35, 0.7);

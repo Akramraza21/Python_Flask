@@ -4,33 +4,34 @@ import Button from "../Button/Button";
 import { NavLink, Redirect } from "react-router-dom";
 import classLog from "./Login.module.css";
 import axios from "axios";
-// import PropTypes from 'prop-types'
-
+import passwordHash from "password-hash";
 export default class Login extends React.Component {
   state = { email: "", password: "", error: "", message: "", toLink: false };
 
   submitHandler = (event) => {
     event.preventDefault();
     const { email, password } = this.state;
-    axios
-      .post("http://0.0.0.0:5000/login", { email: email, password: password })
-      .then((resp) => {
-        let resourse = resp.data;
-        // console.log(resourse, resp)
-        if (resourse.data === "done") {
-          this.setState({
-            error: false,
-            message: resourse.message,
-            toLink: true,
-          });
+    let hashPass = passwordHash.generate(password);
+    let data = { email: email, password: hashPass };
+    console.log(data);
+    console.log(passwordHash.verify(password, hashPass));
+    axios.post("http://0.0.0.0:5000/login", data).then((resp) => {
+      let resourse = resp.data;
+      console.log(resourse, resp);
+      // if (resourse.data === "done") {
+      //   this.setState({
+      //     error: false,
+      //     message: resourse.message,
+      //     toLink: true,
+      //   });
 
-          // console.log("done",resourse.message)
-          return <Redirect to="/logged_in" />;
-        } else if (resourse.data === "error") {
-          this.setState({ error: true, message: resourse.message });
-          // console.log("error",resourse.message)
-        }
-      });
+      //   // console.log("done",resourse.message)
+      //   return <Redirect to="/logged_in" />;
+      // } else if (resourse.data === "error") {
+      //   this.setState({ error: true, message: resourse.message });
+      //   // console.log("error",resourse.message)
+      // }
+    });
   };
 
   render(props) {

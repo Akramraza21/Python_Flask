@@ -7,7 +7,6 @@ import Blog from "./Components/Presentational/Blog/Blog";
 import Home from "./Components/Presentational/Home/Home";
 import Profile from "./Components/Presentational/Profile/Profile";
 import Sign from "./Components/Presentational/Sign/Sign";
-import Contact from "./Components/Presentational/Contact/Contact";
 import Create from "./Components/Presentational/Create/Create";
 import Login from "./Components/Presentational/Login/Login";
 import Logged from "./Components/Presentational/Login/Logged/Logged";
@@ -27,7 +26,6 @@ class App extends Component {
 
   render() {
     const { name } = this.state.data;
-    console.log(Data);
     return (
       <Fragment>
         <BrowserRouter>
